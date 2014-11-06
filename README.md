@@ -3,7 +3,7 @@ A play with Lotus. I'm looking to try to create a basic CMS. I'm getting the gro
 
 ## Goals
 - [x] have fun
-- [] get familar with Lotus
-- [] explore alternative ways to develop applications
-- [] .. drink beer
+- [ ] get familar with Lotus
+- [ ] explore alternative ways to develop applications
+- [ ] .. drink beer
 

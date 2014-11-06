@@ -1,0 +1,28 @@
+<h1> Users </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th> id </th>
+      <th> name </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% users.each do |user| %>
+      <tr>
+        <td>
+          <%= user.id %>
+        </td>
+        <td>
+          <a href="http://localhost:2300/admin/users/<%= user.id %>">
+            <%= user.name %>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<a href="http://localhost:2300/admin/users/new">
+  New User
+</a>

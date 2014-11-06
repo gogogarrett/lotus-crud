@@ -1,0 +1,28 @@
+<h1> Edit User <%= user.name %> </h1>
+
+<form action="/admin/users/<%= user.id %>" method="post">
+  <label for="user[name]">Name</label>
+  <input type="text" name="user[name]" value="<%= user.name %>" />
+
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+<script>
+$(function() {
+  $("form").on("submit", function(event) {
+    event.preventDefault();
+
+    $that = this;
+
+    $.ajax({
+      url: $that.getAttribute('action'),
+      type: "PATCH",
+      data: $('form').serialize(),
+      success: function(data, txt, request) {
+        window.location = request.getResponseHeader("Location")
+      }
+    });
+  });
+});
+</script>
+

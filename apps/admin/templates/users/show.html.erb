@@ -1,0 +1,31 @@
+<h1> User <%= user.name %> </h1>
+
+ID: <%= user.id %>
+
+<a href="http://localhost:2300/admin/users/<%= user.id %>/edit">
+  Edit User
+</a>
+
+<form action="/admin/users/<%= user.id %>" method="post">
+  <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+
+<script>
+$(function() {
+  $("form").on("submit", function(event) {
+    event.preventDefault();
+
+    $that = this;
+
+    $.ajax({
+      url: $that.getAttribute('action'),
+      type: "DELETE",
+      data: $('form').serialize(),
+      success: function(data, txt, request) {
+        window.location = request.getResponseHeader("Location")
+      }
+    });
+  });
+});
+</script>
+

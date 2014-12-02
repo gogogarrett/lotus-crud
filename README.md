@@ -1,9 +1,9 @@
-# Slitr
-A play with Lotus. I'm looking to try to create a basic CMS. I'm getting the ground work in place for [rails camp!](https://ti.to/ruby-australia/rails-camp-perth-2014)
+# Lotus-crud
+A play with Lotus. CRUD a resource.
 
 ## Goals
 - [x] have fun
-- [ ] get familar with Lotus
+- [x] get semi-familar with Lotus
 - [ ] explore alternative ways to develop applications
 - [ ] .. drink beer
 
